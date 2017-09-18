@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Trell-no</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="content">
+			<h1>Welcome to Trell-no!</h1>
+			<p>It's everything you love about trello but...way worse</p>
+			
+			<hr>
+			<h2>Create a List</h2>
+			<p>If you want to create a new list, fill out this form. </p>
+			<form action="http://localhost:3000/list" method="post">
+			  	Title:<br>
+			  	<input type="text" name="title" value="List Title"><br><br>
+			  	<input type="submit" value="Submit">
+			</form>		
+			<h2>Search for a List's ID</h2>
+			<p>If you want to search a for a list's ID, fill out this form. </p>
+			<form action="http://localhost:3000/findlist" method="get">
+			  	Title:<br>
+			  	<input type="text" name="title" value="List Title"><br><br>
+			  	<input type="submit" value="Submit">
+			</form>
+			<h2>Get more info on a List</h2>
+			<p>If you want to know the name and order of a list, fill this out. To find a list's id, use the form above. </p>
+			<form action="http://localhost:3000/list" method="get">
+			  	ID:<br>
+			  	<input type="number" name="listId" value="0"><br><br>
+			  	<input type="submit" value="Submit">
+			</form>
+			<h2>Edit a List</h2>
+			<p>You can edit a list's title/position here. To find a list's ID and/or its current position/title, use the forms above. Leave any fields blank that you do not wish to change.</p>
+			<form action="http://localhost:3000/editlist" method="post">
+			  	List ID:<br>
+			  	<input type="number" name="listId" value="0"><br><br>
+			  	New postion:<br>
+			  	<input type="number" name="order" value=""><br><br>
+			  	New name:<br>
+			  	<input type="text" name="title" value=""><br><br>
+			  	<input type="submit" value="Submit">
+			</form>
+			<h2>Delete a List</h2>
+			<p>If you want to delete a list, fill this form out. To find a lists's ID, use the form above. (Note: HTML 5 does not support delete commands in form objects, but it's in the backend if you want to check it out) </p>
+			
+			<hr>
+			<h2>Add a Card</h2>
+			<p>Add a card to a list. To find a list's id, use the search box above.</p>
+			<form action="http://localhost:3000/card" method="post">
+			  	Title:<br>
+			  	<input type="text" name="title" value="Card Title"><br><br>
+			  	Description:<br>
+			  	<input type="text" name="description" value="Description"><br><br>
+			  	List ID:<br>
+			  	<input type="number" name="listId" value="0"><br><br>
+			  	
+			  	<input type="submit" value="Submit">
+			</form>
+			<h2>Search for a Card's ID</h2>
+			<p>If you want to search for a card's ID, fill out this form. </p>
+			<form action="http://localhost:3000/findcard" method="get">
+			  	Title:<br>
+			  	<input type="text" name="title" value="Card Title"><br><br>
+			  	<input type="submit" value="Submit">
+			</form>
+			
+			<h2>Get more info on a Card</h2>
+			<p>If you want to know the name, description, and list id of a card, fill this out. To find a card's id, use the form above. </p>
+			<form action="http://localhost:3000/card" method="get">
+			  	ID:<br>
+			  	<input type="number" name="cardId" value="0"><br><br>
+			  	<input type="submit" value="Submit">
+			</form>
+			<h2>Edit a Card</h2>
+			<p>You can edit a card's title/descripton/associated list here. To find a card or list's ID, use the forms above. Leave any fields blank that you do not wish to change.</p>
+			<form action="http://localhost:3000/editcard" method="post">
+			  	Card ID:<br>
+			  	<input type="number" name="cardId" value="0"><br><br>
+			  	New List ID:<br>
+			  	<input type="number" name="listId" value=""><br><br>
+			  	New title:<br>
+			  	<input type="text" name="title" value=""><br><br>
+			  	New Desription:<br>
+			  	<input type="text" name="description" value=""><br><br>
+			  	<input type="submit" value="Submit">
+			</form>
+			<h2>Delete a Card</h2>
+			<p>If you want to delete a card, fill this form out. To find a card's ID, use the form above. (Note: HTML 5 does not support delete commands in form objects, but it's in the backend if you want to check it out) </p>
+			<hr>
+		</div>
+	</body>
+</html>
