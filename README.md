@@ -1,3 +1,6 @@
+# Disclaimer
+This project used a MySQL server running locally on my machine with the db pennlabsinterview, so it won't work unless you also create a MySQL db under the same name on your machine, but this oculd easily be ported to the cloud using Google Cloud SQL (which I have experience in) or AWS. Also, on the front-end, I wasn't able to get list visualization done or get the delete commands in the front-end since they removed that ability from forms in HTML5
+
 # Penn Labs: Backend Technical Project
 Let's build an API server for Trello! If you're not familiar with Trello, it's not a problem. Trello is a task-management tool
 that has 3 major functional components: Boards, Lists, and Cards. Each Board can contain many lists, which in turn can contain many cards. 
